@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 
 .prettierrc.cjs
-.env
 package-lock.json
 package.json
 postcss.config.js
