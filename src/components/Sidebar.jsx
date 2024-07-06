@@ -1,5 +1,5 @@
 import ProjectsList from "./ProjectsList";
-import Button from "../Button";
+import Button from "./Button";
 
 export default function Sidebar({
   projects,
@@ -8,13 +8,13 @@ export default function Sidebar({
   selectedProjectId
 }) {
   return (
-    <aside className="w-1/3 rounded-r-xl bg-stone-900 px-8 py-16 text-stone-50 md:w-72">
+    <aside className="rounded-r-xl bg-stone-900 px-8 py-16 text-stone-50 md:w-[22rem]">
+      <Button onClick={onCreateProject} >
+        Add Project
+      </Button>
       <h2 className="mb-8 font-bold uppercase text-stone-200 md:text-xl">
         Your Projects
       </h2>
-      <Button onClick={onCreateProject} >
-        + Add Project
-      </Button>
       <ProjectsList items={projects} onLiftProject={onDisplayProject} selectedProjectId={selectedProjectId} />
     </aside>
   );

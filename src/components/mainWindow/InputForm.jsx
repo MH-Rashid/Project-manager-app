@@ -38,22 +38,9 @@ export default function InputForm({ onCancel, onAddProject }) {
   return (
     <>
       <ErrorModal ref={dialog} />
-      <form onSubmit={handleSubmit} className="mt-16 w-[35rem]">
-        <div className="my-4 flex items-center justify-end gap-4">
-          <button
-            className="text-stone-800 hover:font-semibold hover:text-stone-950"
-            onClick={onCancel}
-          >
-            Cancel
-          </button>
-          <button
-            className="rounded-md bg-stone-800 px-6 py-2 text-stone-50 hover:bg-stone-950"
-            type="submit"
-          >
-            Save
-          </button>
-        </div>
+      <form onSubmit={handleSubmit} className="mt-32 mx-auto w-[45rem]">
         <div>
+          <h1 className="text-xl font-normal uppercase mb-8 text-stone-500">New Project</h1>
           <p className="flex flex-col gap-1 my-4">
             <label className="text-base font-bold uppercase text-stone-500">
               Title
@@ -84,6 +71,20 @@ export default function InputForm({ onCancel, onAddProject }) {
               ref={dueDate}
             />
           </p>
+        </div>
+        <div className="mt-8 flex items-center justify-end gap-4">
+          <button
+            className="text-stone-800 hover:font-semibold hover:text-stone-950"
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
+          <button
+            className="rounded-md bg-stone-800 px-6 py-2 text-stone-50 hover:bg-stone-950"
+            type="submit"
+          >
+            Save
+          </button>
         </div>
       </form>
     </>

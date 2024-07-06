@@ -29,7 +29,7 @@ export default function ProjectDetails({
   };
 
   return (
-    <div className="mt-16 w-[35rem]">
+    <div className="mt-32 mx-auto w-[45rem]">
       <header className="mb-4 border-b-2 border-stone-300 pb-4">
         <div className="flex items-center justify-between">
           <h1 className="mb-2 text-3xl font-bold text-stone-600">

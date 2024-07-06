@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
-import Sidebar from "./components/Sidebar/SidebarCmp";
+import Sidebar from "./components/Sidebar";
 import Fallback from "./components/mainWindow/Fallback";
 import InputForm from "./components/mainWindow/InputForm";
 import ProjectDetails from "./components/mainWindow/ProjectDetails";
 
+import dummyProjects from './projects.json';
+import dummyTasks from './tasks.json'
+
 function App() {
-  const [projects, setProjects] = useState([]);
-  const [tasks, setTasks] = useState([]);
+  const [projects, setProjects] = useState(dummyProjects);
+  const [tasks, setTasks] = useState(dummyTasks);
   const [formDisplay, setFormDisplay] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState(false);
 
@@ -82,7 +85,7 @@ function App() {
   }
 
   return (
-    <main className="my-8 h-screen flex gap-8">
+    <main className="h-screen flex align-top gap-8">
       <Sidebar
         projects={projects}
         selectedProjectId={selectedProjectId}
